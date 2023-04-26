@@ -1,5 +1,7 @@
+// Package for working with map slices in golang
 package maps
 
+// Filtering elements in a slice of maps
 func FilterMap(data []map[string]interface{}, callback func(map[string]interface{}) bool) []map[string]interface{} {
 	filteredData := []map[string]interface{}{}
 
@@ -12,6 +14,7 @@ func FilterMap(data []map[string]interface{}, callback func(map[string]interface
 	return filteredData
 }
 
+// Search for the first element in a slice of maps by fields
 func FindMap(data []map[string]interface{}, callback func(map[string]interface{}) bool) map[string]interface{} {
 	foundData := map[string]interface{}{}
 
@@ -24,6 +27,7 @@ func FindMap(data []map[string]interface{}, callback func(map[string]interface{}
 	return foundData
 }
 
+//Converting a map slice to a nested map slice with no nesting level limit
 func GetNestedMap(data []map[string]interface{}, columnID string, columnParent string, columnChild string) []map[string]interface{} {
 	nestedMap := []map[string]interface{}{}
 

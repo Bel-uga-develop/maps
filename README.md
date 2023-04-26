@@ -14,12 +14,6 @@ go get github.com/Bel-uga-develop/maps
 ## Example
 ### Search for the first element in a slice of maps by fields
 
-FindMap(data, callback_function)
-
-data  type []map[string]interface{} -  Map slice data
-
-callback_function type function - callback function to find the first element by one or more fields
-
 ```	
 data := []map[string]interface{}{
 		{
@@ -49,12 +43,6 @@ foundData := maps.FindMap(
 
 ### Filtering elements in a slice of maps
 
-FilterMap(data, callback_function)
-
-data  type []map[string]interface{} -  Map slice data
-
-callback_function type function - Сallback function to filter items by one or more fields
-
  ```
  	fileteredMap := maps.FilterMap(
 		data,
@@ -67,18 +55,6 @@ callback_function type function - Сallback function to filter items by one or m
 	)
 ```
 ### Converting a map slice to a nested map slice with no nesting level limit
-
-GetNestedMap(data, column_name_id, parent_column_name, sub_column_name)
-
-data  type []map[string]interface{} -  Map slice data
-
-column_name_id type string - Сolumn name with primary key
-
-parent_column_name type string - The name of the column that specifies the parent element
-
-sub_column_name type string - Column name for nested elements
-
-
 ```
 nestedMap := maps.GetNestedMap(data, "id", "parent_menu_item_id", "sub_item")
 ```
